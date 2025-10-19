@@ -44,10 +44,13 @@ body {
 /* ===========================
    Hero Section
 =========================== */
+/* ===========================
+   Hero Section
+=========================== */
 .hero {
   min-height: 90vh;
   background: url('imgs/jefferson-sees-7t88gt0l27A-unsplash.jpg') no-repeat center center;
-  background-size: cover; /* cover ensures full hero section */
+  background-size: cover; /* full hero section */
   position: relative;
   color: #3a2f2f;
   display: flex;
@@ -58,21 +61,22 @@ body {
   margin: 0;
 }
 
+/* Overlay for text readability */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(244, 238, 224, 0.5); /* slightly transparent overlay */
-  backdrop-filter: blur(5px);
+  background: rgba(244, 238, 224, 0.55);
+  backdrop-filter: blur(4px);
   z-index: 1;
 }
 
+/* Hero content */
 .hero .content {
   position: relative;
   z-index: 2;
   max-width: 800px;
 }
-
 
 .hero h1 {
   font-size: 3rem;
@@ -88,6 +92,7 @@ body {
   text-shadow: 1px 1px 4px rgba(0,0,0,0.15);
 }
 
+/* Hero button */
 .hero .btn-brown {
   background-color: #6f4e37;
   color: #fff;
@@ -103,66 +108,31 @@ body {
   transform: scale(1.05);
 }
 
-/* Responsive Hero */
-@media (max-width:768px) {
-  .hero h1 { font-size: 2.2rem; }
-  .hero p { font-size: 1rem; }
-  .hero .btn-brown { padding: 10px 25px; }
-}
-/* keep the existing desktop background (no change) */
-.hero {
-  min-height: 90vh;
-  background: url('imgs/jefferson-sees-7t88gt0l27A-unsplash.jpg') no-repeat center center;
-  background-size: cover;
-  position: relative;
-  color: #3a2f2f;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 0;
-  margin: 0;
-}
-
-/* hero image fallback — default hidden on desktop */
+/* Fallback <img> for mobile */
 .hero-img {
   display: none;
   position: absolute;
-  inset: 0;              /* top:0; right:0; bottom:0; left:0; */
+  inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;     /* keeps aspect and crops nicely */
+  object-fit: cover;
   object-position: center center;
   z-index: 0;
 }
 
-/* ensure content sits above the image/overlay */
-.hero .content { z-index: 2; position: relative; }
-
-/* overlay stays above image but below text */
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(244,238,224,0.55);
-  z-index: 1;
-  backdrop-filter: blur(4px); /* fine if not supported — harmless */
-}
-
-/* MOBILE: show the <img> fallback and hide background if needed */
+/* Mobile-specific adjustments */
 @media (max-width: 768px) {
-  /* show img fallback */
+  .hero {
+    background: none; /* hide background image on mobile */
+  }
   .hero-img {
     display: block;
   }
-  /* optional: if the CSS background causes weird cropping on mobile, hide it */
-  .hero {
-    background: none; /* fallback relies on <img> for mobile */
-  }
-
-  /* adjust content color for readability over image */
   .hero .content { color: #fff; }
   .hero h1 { text-shadow: 1px 1px 3px rgba(0,0,0,0.5); }
+  .hero h1 { font-size: 2.2rem; }
+  .hero p { font-size: 1rem; }
+  .hero .btn-brown { padding: 10px 25px; }
 }
 
 /* ===========================
@@ -319,6 +289,7 @@ footer {
   #nextBtn { padding: 10px 25px; font-size: 0.95rem; }
   .category-btn { padding: 7px 15px; font-size: 0.95rem; }
 }
+
 
 
 
