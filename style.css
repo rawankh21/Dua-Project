@@ -44,24 +44,22 @@ body {
 /* ===========================
    Hero Section
 =========================== */
-/* ===========================
-   Hero Section
-=========================== */
+/* Hero Section */
 .hero {
   min-height: 90vh;
   background: url('imgs/jefferson-sees-7t88gt0l27A-unsplash.jpg') no-repeat center center;
-  background-size: cover; /* full hero section */
+  background-size: cover;
   position: relative;
-  color: #3a2f2f;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: 0;
   margin: 0;
+  color: #3a2f2f;
 }
 
-/* Overlay for text readability */
+/* Overlay for readability */
 .hero::before {
   content: "";
   position: absolute;
@@ -78,21 +76,19 @@ body {
   max-width: 800px;
 }
 
-.hero h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.25);
+/* Hero fallback <img> */
+.hero-img {
+  display: none;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
 }
 
-.hero p {
-  font-size: 1.25rem;
-  margin-bottom: 30px;
-  line-height: 1.6;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.15);
-}
-
-/* Hero button */
+/* Buttons */
 .hero .btn-brown {
   background-color: #6f4e37;
   color: #fff;
@@ -108,29 +104,25 @@ body {
   transform: scale(1.05);
 }
 
-/* Fallback <img> for mobile */
-.hero-img {
-  display: none;
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center center;
-  z-index: 0;
-}
-
-/* Mobile-specific adjustments */
+/* Mobile adjustments */
 @media (max-width: 768px) {
   .hero {
-    background: none; /* hide background image on mobile */
+    background: none; /* hide bg on mobile */
   }
+
   .hero-img {
     display: block;
   }
-  .hero .content { color: #fff; }
-  .hero h1 { text-shadow: 1px 1px 3px rgba(0,0,0,0.5); }
-  .hero h1 { font-size: 2.2rem; }
+
+  .hero .content {
+    color: #fff;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  }
+
   .hero p { font-size: 1rem; }
   .hero .btn-brown { padding: 10px 25px; }
 }
@@ -289,6 +281,7 @@ footer {
   #nextBtn { padding: 10px 25px; font-size: 0.95rem; }
   .category-btn { padding: 7px 15px; font-size: 0.95rem; }
 }
+
 
 
 
