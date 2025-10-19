@@ -1,0 +1,259 @@
+/* ===========================
+   Body & Typography
+=========================== */
+body {
+  font-family: "Cairo", sans-serif;
+  background: linear-gradient(180deg, #f4eee0 0%, #ede3d5 50%, #e2d1c3 100%);
+  color: #3a2f2f;
+  scroll-behavior: smooth;
+  margin: 0;
+}
+
+/* Scroll Fix */
+:target {
+  scroll-margin-top: 140px;
+}
+
+/* Text Colors */
+.text-brown {
+  color: #6f4e37 !important;
+}
+
+/* ===========================
+   Navbar
+=========================== */
+.glassy-nav {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 2px 10px rgba(111, 78, 55, 0.15);
+}
+
+.navbar-brand {
+  font-size: 1.6rem;
+}
+
+.nav-link {
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #8c5c42 !important;
+}
+
+/* ===========================
+   Hero Section
+=========================== */
+.hero {
+  min-height: 90vh;
+  background: url('/dua/imgs/jefferson-sees-7t88gt0l27A-unsplash.jpg') center/cover no-repeat;
+  position: relative;
+  color: #3a2f2f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(244, 238, 224, 0.65);
+  backdrop-filter: blur(6px);
+  z-index: 1;
+}
+
+.hero .content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.25);
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.15);
+}
+
+.hero .btn-brown {
+  background-color: #6f4e37;
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-weight: 600;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+}
+
+.hero .btn-brown:hover {
+  background-color: #8c5c42;
+  transform: scale(1.05);
+}
+
+/* Responsive Hero */
+@media (max-width:768px) {
+  .hero h1 { font-size: 2.2rem; }
+  .hero p { font-size: 1rem; }
+  .hero .btn-brown { padding: 10px 25px; }
+}
+
+/* ===========================
+   Category Buttons
+=========================== */
+#categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.category-btn {
+  background: #f8f1e7;
+  border: 1px solid #d2b48c;
+  color: #6f4e37;
+  margin: 5px;
+  padding: 8px 18px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.category-btn:hover,
+.category-btn.active {
+  background: #6f4e37;
+  color: #fff;
+}
+
+/* ===========================
+   Dua Card
+=========================== */
+.dua-card {
+  max-width: 650px;
+  margin: 0 auto 60px;
+  padding: 30px 25px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(111, 78, 55, 0.15);
+  box-shadow: 0 8px 20px rgba(111, 78, 55, 0.15);
+  text-align: center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.dua-card:hover {
+  transform: translateY(-5px);
+}
+
+#duaText {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  margin-bottom: 25px;
+  min-height: 80px;
+  transition: opacity 0.3s ease;
+}
+
+#duaText.fade-text {
+  opacity: 0;
+}
+
+#duaText.show {
+  opacity: 1;
+}
+
+/* Next Button */
+#nextBtn {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 12px 30px;
+  border-radius: 25px;
+  border: none;
+  background-color: #6f4e37;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+#nextBtn:hover {
+  background-color: #8c5c42;
+  transform: scale(1.05);
+}
+
+/* Restart Button */
+#restartBtn {
+  background-color: #6f4e37;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-weight: 600;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+}
+
+#restartBtn:hover {
+  background-color: #8c5c42;
+}
+
+/* ===========================
+   About & Contact Sections
+=========================== */
+.about, .contact {
+  background-color: #f8f1e7;
+  padding: 60px 20px;
+}
+
+.about h2, .contact h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+}
+
+.about p, .contact p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #5a4a3f;
+}
+
+/* Social Icons */
+.social-icons a {
+  font-size: 1.5rem;
+  margin: 0 10px;
+  color: #6f4e37;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.1);
+  color: #8c5c42;
+}
+
+/* ===========================
+   Footer
+=========================== */
+footer {
+  background-color: #f3e6d8;
+  color: #6f4e37;
+  font-weight: 500;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* ===========================
+   Responsive tweaks
+=========================== */
+@media (max-width: 768px) {
+  #duaText { font-size: 1.1rem; min-height: 60px; }
+  #nextBtn { padding: 10px 25px; font-size: 0.95rem; }
+  .category-btn { padding: 7px 15px; font-size: 0.95rem; }
+}
