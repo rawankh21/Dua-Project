@@ -46,8 +46,8 @@ body {
 =========================== */
 .hero {
   min-height: 90vh;
-  background: url('https://images.unsplash.com/photo-1581092795368-85b6d0f32c0c?auto=format&fit=crop&w=1600&q=80') no-repeat center top;
-  background-size: contain; /* or 'cover' if you want full screen but adjust position */
+  background: url('imgs/jefferson-sees-7t88gt0l27A-unsplash.jpg') no-repeat center center;
+  background-size: cover; /* cover ensures full hero section */
   position: relative;
   color: #3a2f2f;
   display: flex;
@@ -58,13 +58,12 @@ body {
   margin: 0;
 }
 
-
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(244, 238, 224, 0.65);
-  backdrop-filter: blur(6px);
+  background: rgba(244, 238, 224, 0.5); /* slightly transparent overlay */
+  backdrop-filter: blur(5px);
   z-index: 1;
 }
 
@@ -73,6 +72,7 @@ body {
   z-index: 2;
   max-width: 800px;
 }
+
 
 .hero h1 {
   font-size: 3rem;
@@ -264,6 +264,7 @@ footer {
   #nextBtn { padding: 10px 25px; font-size: 0.95rem; }
   .category-btn { padding: 7px 15px; font-size: 0.95rem; }
 }
+
 
 
 
