@@ -46,15 +46,18 @@ body {
 =========================== */
 .hero {
   min-height: 90vh;
-  background: url('https://images.unsplash.com/photo-1581092795368-85b6d0f32c0c?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  background: url('https://images.unsplash.com/photo-1581092795368-85b6d0f32c0c?auto=format&fit=crop&w=1600&q=80') no-repeat center top;
+  background-size: contain; /* or 'cover' if you want full screen but adjust position */
   position: relative;
   color: #3a2f2f;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 0 20px;
+  padding: 0;
+  margin: 0;
 }
+
 
 .hero::before {
   content: "";
@@ -261,6 +264,7 @@ footer {
   #nextBtn { padding: 10px 25px; font-size: 0.95rem; }
   .category-btn { padding: 7px 15px; font-size: 0.95rem; }
 }
+
 
 
 
