@@ -1,6 +1,4 @@
-/* ===========================
-   Body & Typography
-=========================== */
+
 body {
   font-family: "Cairo", sans-serif;
   background: linear-gradient(180deg, #f4eee0 0%, #ede3d5 50%, #e2d1c3 100%);
@@ -19,9 +17,9 @@ body {
   color: #6f4e37 !important;
 }
 
-/* ===========================
+/* 
    Navbar
-=========================== */
+*/
 .glassy-nav {
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(12px);
@@ -41,9 +39,9 @@ body {
   color: #8c5c42 !important;
 }
 
-/* ===========================
+/* 
    Hero Section
-=========================== */
+*/
 .hero {
   min-height: 90vh;
   background: url('imgs/jefferson-sees-7t88gt0l27A-unsplash.jpg') no-repeat center center;
@@ -119,9 +117,9 @@ body {
   transform: scale(1.05);
 }
 
-/* ===========================
+/* 
    Category Buttons
-=========================== */
+ */
 #categories {
   display: flex;
   flex-wrap: wrap;
@@ -148,9 +146,9 @@ body {
   color: #fff;
 }
 
-/* ===========================
+/* 
    Dua Card
-=========================== */
+ */
 .dua-card {
   max-width: 650px;
   margin: 0 auto 60px;
@@ -217,9 +215,9 @@ body {
   background-color: #8c5c42;
 }
 
-/* ===========================
+/* 
    About & Contact Sections
-=========================== */
+ */
 .about, .contact {
   background-color: #f8f1e7;
   padding: 60px 20px;
@@ -249,9 +247,9 @@ body {
   color: #8c5c42;
 }
 
-/* ===========================
+/* 
    Footer
-=========================== */
+ */
 footer {
   background-color: #f3e6d8;
   color: #6f4e37;
@@ -260,9 +258,9 @@ footer {
   text-align: center;
 }
 
-/* ===========================
-   Responsive tweaks
-=========================== */
+/* 
+   Responsive 
+ */
 @media (max-width: 768px) {
   #duaText { font-size: 1.1rem; min-height: 60px; }
   #nextBtn { padding: 10px 25px; font-size: 0.95rem; }
@@ -274,3 +272,4 @@ footer {
   .hero { background: none; }
   .hero .content { color: #fff; }
 }
+
