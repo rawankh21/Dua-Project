@@ -1,4 +1,3 @@
-// script.js — connect UI + duasData
 document.addEventListener("DOMContentLoaded", () => {
   console.log("script loaded");
   if (typeof duasData === "undefined") {
@@ -16,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
   let currentCategory = "دعاء للمتوفي";
   let currentIndex = 0;
 
-  // helper: render current dua with fade-in
   function renderDua() {
     const arr = duasData[currentCategory] || [];
     if (!arr.length) {
@@ -26,7 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    // hide then show for animation
     duaText.classList.remove("show");
     setTimeout(() => {
       duaText.textContent = arr[currentIndex];
@@ -35,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 200);
   }
 
-  // next dua
+
   function nextDua() {
     const arr = duasData[currentCategory] || [];
     if (!arr.length) return;
@@ -49,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
         duaText.classList.add("show");
         nextBtn.style.display = "none";
 
-        // attach restart handler (after DOM updates)
+     
         setTimeout(() => {
           const restart = document.getElementById("restartBtn");
           if (restart) restart.addEventListener("click", () => {
@@ -64,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // category clicks
+
   cats.forEach(btn => {
     btn.addEventListener("click", () => {
       cats.forEach(b => b.classList.remove("active"));
@@ -73,17 +70,17 @@ document.addEventListener("DOMContentLoaded", () => {
       currentIndex = 0;
       nextBtn.style.display = "inline-block";
       renderDua();
-      // scroll to card on mobile for focus
+      
       document.querySelector(".dua-card")?.scrollIntoView({behavior:"smooth", block:"center"});
     });
   });
 
-  // next button
+
   nextBtn.addEventListener("click", nextDua);
 
-  // initial render
   renderDua();
 
-  // debug
+
   console.log("categories:", Object.keys(duasData));
 });
+
