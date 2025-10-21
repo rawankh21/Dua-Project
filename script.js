@@ -70,8 +70,6 @@ document.addEventListener("DOMContentLoaded", () => {
       currentIndex = 0;
       nextBtn.style.display = "inline-block";
       renderDua();
-      
-      document.querySelector(".dua-card")?.scrollIntoView({behavior:"smooth", block:"center"});
     });
   });
 
@@ -83,4 +81,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
   console.log("categories:", Object.keys(duasData));
 });
+
 
