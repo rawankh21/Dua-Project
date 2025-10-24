@@ -1,7 +1,6 @@
+
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("script loaded");
   if (typeof duasData === "undefined") {
-    console.error("duasData missing — ensure duas.js loads before script.js");
     const dt = document.getElementById("duaText");
     if (dt) dt.textContent = "خطأ: بيانات الأدعية غير محمّلة.";
     return;
@@ -32,21 +31,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 200);
   }
 
-
+ 
   function nextDua() {
     const arr = duasData[currentCategory] || [];
     if (!arr.length) return;
 
     currentIndex++;
     if (currentIndex >= arr.length) {
-      // show ended state with restart button
       duaText.classList.remove("show");
       setTimeout(() => {
         duaText.innerHTML = `🌸 انتهت الأدعية لهذه الفئة<br><button id="restartBtn" class="btn-next mt-3">إعادة البداية</button>`;
         duaText.classList.add("show");
         nextBtn.style.display = "none";
-
-     
         setTimeout(() => {
           const restart = document.getElementById("restartBtn");
           if (restart) restart.addEventListener("click", () => {
@@ -61,7 +57,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-
   cats.forEach(btn => {
     btn.addEventListener("click", () => {
       cats.forEach(b => b.classList.remove("active"));
@@ -73,11 +68,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-
   nextBtn.addEventListener("click", nextDua);
 
   renderDua();
-
 
   console.log("categories:", Object.keys(duasData));
 });
